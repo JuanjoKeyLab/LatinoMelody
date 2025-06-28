@@ -77,9 +77,11 @@ html {
 .nav-link {
     color: var(--dark-bg) !important;
     font-weight: 500;
-    margin: 0 0.5rem;
+    margin: 0 0.3rem;
     transition: all 0.3s ease;
     position: relative;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem !important;
 }
 
 .nav-link::after {
@@ -573,30 +575,36 @@ section {
         display: flex;
         background: transparent;
         border-radius: 0;
-        padding: 0.5rem 0;
-        margin-top: 0.5rem;
+        padding: 0.3rem 0;
+        margin-top: 0.3rem;
+        gap: 0.3rem;
     }
     
     .language-selector-mobile .lang-btn {
-        padding: 0.4rem 0.8rem;
-        gap: 0.4rem;
+        padding: 0.3rem 0.6rem;
+        gap: 0.3rem;
         background: rgba(255, 255, 255, 0.2);
+        font-size: 0.75rem;
     }
     
     .language-selector-mobile .lang-btn span {
         display: inline;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         font-weight: 500;
     }
     
     .language-selector-mobile .flag-icon {
-        width: 20px;
-        height: 15px;
+        width: 18px;
+        height: 13px;
     }
     
     .navbar-collapse.show {
         background: transparent;
         backdrop-filter: none;
+    }
+    
+    .navbar-nav .nav-item {
+        margin: 0.1rem 0;
     }
 }
 
@@ -614,7 +622,7 @@ section {
     backdrop-filter: none;
     border-radius: 0;
     margin-top: 0;
-    padding: 0;
+    padding: 0.5rem 0;
 }
 
 .navbar-nav {

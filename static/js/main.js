@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initNavbarEffects();
     initMusicianCards();
     initParallaxEffects();
+    initNavbarCollapse();
 });
 
 // Smooth scrolling for navigation links
@@ -149,6 +150,38 @@ function initParallaxEffects() {
                 scrollIndicator.style.opacity = opacity;
             }
         }
+    });
+}
+
+// Close navbar when clicking outside
+function initNavbarCollapse() {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    // Close navbar when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInsideNavbar = navbarCollapse.contains(event.target) || navbarToggler.contains(event.target);
+        
+        if (!isClickInsideNavbar && navbarCollapse.classList.contains('show')) {
+            // Use Bootstrap's collapse functionality
+            const collapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, {
+                toggle: false
+            });
+            collapse.hide();
+        }
+    });
+    
+    // Close navbar when clicking on nav links
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (navbarCollapse.classList.contains('show')) {
+                const collapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+                collapse.hide();
+            }
+        });
     });
 }
 

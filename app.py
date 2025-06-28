@@ -34,6 +34,7 @@ LANGUAGES = {
             'home': 'Inicio',
             'about': 'Nosotros',
             'musicians': 'Músicos',
+            'presentations': 'Presentaciones',
             'contact': 'Contacto'
         },
         'hero': {
@@ -92,6 +93,10 @@ LANGUAGES = {
                 'skills': ['Balada', 'Pop Latino', 'R&B']
             }
         },
+        'presentations': {
+            'title': 'Nuestras Presentaciones',
+            'subtitle': 'Revive la magia de nuestros conciertos más memorables'
+        },
         'contact': {
             'title': 'Conecta con Nosotros',
             'subtitle': '¿Interesado en colaborar o contratar nuestros servicios?',
@@ -106,6 +111,7 @@ LANGUAGES = {
             'home': 'Accueil',
             'about': 'À Propos',
             'musicians': 'Musiciens',
+            'presentations': 'Concerts',
             'contact': 'Contact'
         },
         'hero': {
@@ -164,6 +170,10 @@ LANGUAGES = {
                 'skills': ['Ballade', 'Pop Latino', 'R&B']
             }
         },
+        'presentations': {
+            'title': 'Nos Concerts',
+            'subtitle': 'Revivez la magie de nos performances les plus mémorables'
+        },
         'contact': {
             'title': 'Connectez-vous avec Nous',
             'subtitle': 'Intéressé par une collaboration ou engager nos services?',
@@ -178,6 +188,7 @@ LANGUAGES = {
             'home': 'Home',
             'about': 'About',
             'musicians': 'Musicians',
+            'presentations': 'Performances',
             'contact': 'Contact'
         },
         'hero': {
@@ -235,6 +246,10 @@ LANGUAGES = {
                 'description': 'The voice that moves and tells stories. Fay possesses an exceptional vocal range and the ability to convey deep emotions. Her authentic interpretation brings lyrics to life and connects directly with the audience.',
                 'skills': ['Ballad', 'Latin Pop', 'R&B']
             }
+        },
+        'presentations': {
+            'title': 'Our Performances',
+            'subtitle': 'Relive the magic of our most memorable concerts'
         },
         'contact': {
             'title': 'Connect with Us',

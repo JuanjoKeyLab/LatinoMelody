@@ -71,6 +71,9 @@
                         <a class="nav-link" href="#musicians">{{ content.nav.musicians }}</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#presentations">{{ content.nav.presentations }}</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#contact">{{ content.nav.contact }}</a>
                     </li>
                 </ul>
@@ -344,6 +347,148 @@
                                 {% for skill in content.musicians.fay.skills %}
                                 <span class="skill-tag">{{ skill }}</span>
                                 {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentations Section -->
+    <section id="presentations" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">{{ content.presentations.title }}</h2>
+                <p class="section-subtitle">{{ content.presentations.subtitle }}</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Concert Card 1 -->
+                <div class="col-lg-6 col-xl-4">
+                    <div class="presentation-card">
+                        <div class="video-container">
+                            <div class="video-placeholder">
+                                <i class="fas fa-play video-play-icon"></i>
+                                <div class="video-overlay">
+                                    <span class="video-duration">4:32</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="presentation-content">
+                            <h4 class="presentation-title">Festival de Verano Madrid 2024</h4>
+                            <p class="presentation-description">
+                                Una noche mágica donde LAtinouch conquistó el escenario principal del Festival de Verano. 
+                                Con más de 5,000 personas vibrando al ritmo de nuestras fusiones latinas, este concierto 
+                                marcó un hito en nuestra carrera musical.
+                            </p>
+                            <div class="presentation-details">
+                                <span class="detail-item"><i class="fas fa-calendar"></i> 15 Julio 2024</span>
+                                <span class="detail-item"><i class="fas fa-map-marker-alt"></i> Madrid, España</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Concert Card 2 -->
+                <div class="col-lg-6 col-xl-4">
+                    <div class="presentation-card">
+                        <div class="video-container">
+                            <div class="video-placeholder">
+                                <i class="fas fa-play video-play-icon"></i>
+                                <div class="video-overlay">
+                                    <span class="video-duration">6:15</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="presentation-content">
+                            <h4 class="presentation-title">Noche de Tango Parisino</h4>
+                            <p class="presentation-description">
+                                En el corazón de París, LAtinouch presentó una versión íntima de sus mejores composiciones. 
+                                El violín de Marjorie brilló especialmente en esta velada, transportando al público a las 
+                                calles de Buenos Aires con cada nota.
+                            </p>
+                            <div class="presentation-details">
+                                <span class="detail-item"><i class="fas fa-calendar"></i> 22 Agosto 2024</span>
+                                <span class="detail-item"><i class="fas fa-map-marker-alt"></i> París, Francia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Concert Card 3 -->
+                <div class="col-lg-6 col-xl-4">
+                    <div class="presentation-card">
+                        <div class="video-container">
+                            <div class="video-placeholder">
+                                <i class="fas fa-play video-play-icon"></i>
+                                <div class="video-overlay">
+                                    <span class="video-duration">5:48</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="presentation-content">
+                            <h4 class="presentation-title">Carnaval de Río 2024</h4>
+                            <p class="presentation-description">
+                                LAtinouch tuvo el honor de abrir el Carnaval de Río con una explosión de ritmos brasileños 
+                                fusionados con sonidos caribeños. La energía de Neil en las percusiones electrizó a toda 
+                                la multitud en esta celebración inolvidable.
+                            </p>
+                            <div class="presentation-details">
+                                <span class="detail-item"><i class="fas fa-calendar"></i> 10 Febrero 2024</span>
+                                <span class="detail-item"><i class="fas fa-map-marker-alt"></i> Río de Janeiro, Brasil</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Concert Card 4 -->
+                <div class="col-lg-6 col-xl-4">
+                    <div class="presentation-card">
+                        <div class="video-container">
+                            <div class="video-placeholder">
+                                <i class="fas fa-play video-play-icon"></i>
+                                <div class="video-overlay">
+                                    <span class="video-duration">7:22</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="presentation-content">
+                            <h4 class="presentation-title">Concierto Acústico Barcelona</h4>
+                            <p class="presentation-description">
+                                Una versión completamente acústica de LAtinouch en un teatro íntimo de Barcelona. 
+                                Sin amplificación eléctrica, el grupo demostró la pureza de su talento musical, 
+                                destacando especialmente las harmonías vocales de Fay.
+                            </p>
+                            <div class="presentation-details">
+                                <span class="detail-item"><i class="fas fa-calendar"></i> 5 Octubre 2024</span>
+                                <span class="detail-item"><i class="fas fa-map-marker-alt"></i> Barcelona, España</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Concert Card 5 -->
+                <div class="col-lg-6 col-xl-4">
+                    <div class="presentation-card">
+                        <div class="video-container">
+                            <div class="video-placeholder">
+                                <i class="fas fa-play video-play-icon"></i>
+                                <div class="video-overlay">
+                                    <span class="video-duration">8:03</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="presentation-content">
+                            <h4 class="presentation-title">Festival Latino New York</h4>
+                            <p class="presentation-description">
+                                LAtinouch cerró con broche de oro el Festival Latino de Nueva York, mezclando ritmos 
+                                tradicionales con beats modernos. Juan José brilló con sus arreglos de sintetizador, 
+                                creando una experiencia musical única que fusionó épocas y estilos.
+                            </p>
+                            <div class="presentation-details">
+                                <span class="detail-item"><i class="fas fa-calendar"></i> 18 Septiembre 2024</span>
+                                <span class="detail-item"><i class="fas fa-map-marker-alt"></i> Nueva York, EE.UU.</span>
                             </div>
                         </div>
                     </div>

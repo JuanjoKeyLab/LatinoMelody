@@ -37,8 +37,8 @@ html {
 
 /* Navigation */
 .navbar {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(40, 40, 40, 0.6) 100%);
-    backdrop-filter: blur(8px);
+    background: transparent;
+    backdrop-filter: none;
     transition: all 0.3s ease;
     padding: 1rem 0;
 }
@@ -571,9 +571,9 @@ section {
     
     .language-selector-mobile {
         display: flex;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 6px;
-        padding: 0.5rem;
+        background: transparent;
+        border-radius: 0;
+        padding: 0.5rem 0;
         margin-top: 0.5rem;
     }
     
@@ -595,8 +595,8 @@ section {
     }
     
     .navbar-collapse.show {
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(40, 40, 40, 0.5) 100%);
-        backdrop-filter: blur(8px);
+        background: transparent;
+        backdrop-filter: none;
     }
 }
 
@@ -610,11 +610,11 @@ section {
 .navbar-collapse {
     position: relative;
     z-index: 999;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(40, 40, 40, 0.5) 100%);
-    backdrop-filter: blur(8px);
-    border-radius: 8px;
-    margin-top: 0.5rem;
-    padding: 1rem;
+    background: transparent;
+    backdrop-filter: none;
+    border-radius: 0;
+    margin-top: 0;
+    padding: 0;
 }
 
 .navbar-nav {

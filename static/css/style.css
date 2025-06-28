@@ -62,6 +62,7 @@ html {
     width: auto;
     transition: all 0.3s ease;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+    background: transparent;
 }
 
 .navbar.scrolled .logo-img {

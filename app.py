@@ -38,14 +38,14 @@ LANGUAGES = {
             'contact': 'Contacto'
         },
         'hero': {
-            'title': 'LAtinouch',
+            'title': 'Latinouch',
             'subtitle': 'Fusión Musical Latinoamericana',
             'btn_musicians': 'Conoce al Grupo',
             'btn_about': 'Nuestra Historia'
         },
         'about': {
             'title': 'Nuestra Pasión Musical',
-            'description': 'LAtinouch nace de la fusión de diferentes culturas y sonidos latinoamericanos, creando una propuesta musical única que combina tradición e innovación.',
+            'description': 'Latinouch nace de la fusión de diferentes culturas y sonidos latinoamericanos, creando una propuesta musical única que combina tradición e innovación.',
             'feature1_title': 'Sonidos Auténticos',
             'feature1_desc': 'Instrumentos tradicionales fusionados con elementos modernos',
             'feature2_title': 'Pasión Latina',
@@ -55,7 +55,7 @@ LANGUAGES = {
         },
         'musicians': {
             'title': 'Nuestros Artistas',
-            'subtitle': 'Conoce a los talentosos músicos que dan vida a LAtinouch',
+            'subtitle': 'Conoce a los talentosos músicos que dan vida a Latinouch',
             'marjorie': {
                 'name': 'Marjorie',
                 'instrument': 'Violinista',
@@ -65,13 +65,13 @@ LANGUAGES = {
             'pierre': {
                 'name': 'Pierre',
                 'instrument': 'Guitarra Rítmica',
-                'description': 'El corazón rítmico de LAtinouch. Pierre domina los acordes que sostienen nuestras composiciones, aportando groove y energía. Su experiencia en diferentes géneros latinos le permite crear texturas únicas y envolventes.',
+                'description': 'El corazón rítmico de Latinouch. Pierre domina los acordes que sostienen nuestras composiciones, aportando groove y energía. Su experiencia en diferentes géneros latinos le permite crear texturas únicas y envolventes.',
                 'skills': ['Bossa Nova', 'Cumbia', 'Reggaeton']
             },
             'romain': {
                 'name': 'Romain',
                 'instrument': 'Guitarra Líder',
-                'description': 'Maestro de los solos y las melodías principales. Romain fusiona técnicas de rock, jazz y música tradicional latina para crear líneas melódicas inolvidables que definen el sonido característico de LAtinouch.',
+                'description': 'Maestro de los solos y las melodías principales. Romain fusiona técnicas de rock, jazz y música tradicional latina para crear líneas melódicas inolvidables que definen el sonido característico de Latinouch.',
                 'skills': ['Jazz Latino', 'Rock', 'Flamenco']
             },
             'neil': {
@@ -103,7 +103,7 @@ LANGUAGES = {
             'email': 'Email',
             'phone': 'Teléfono',
             'social': 'Redes Sociales',
-            'footer': '© 2025 LAtinouch. Todos los derechos reservados.'
+            'footer': '© 2025 Latinouch. Todos los derechos reservados.'
         }
     },
     'fr': {
@@ -115,14 +115,14 @@ LANGUAGES = {
             'contact': 'Contact'
         },
         'hero': {
-            'title': 'LAtinouch',
+            'title': 'Latinouch',
             'subtitle': 'Fusion Musicale Latino-Américaine',
             'btn_musicians': 'Découvrez le Groupe',
             'btn_about': 'Notre Histoire'
         },
         'about': {
             'title': 'Notre Passion Musicale',
-            'description': 'LAtinouch naît de la fusion de différentes cultures et sons latino-américains, créant une proposition musicale unique qui combine tradition et innovation.',
+            'description': 'Latinouch naît de la fusion de différentes cultures et sons latino-américains, créant une proposition musicale unique qui combine tradition et innovation.',
             'feature1_title': 'Sons Authentiques',
             'feature1_desc': 'Instruments traditionnels fusionnés avec des éléments modernes',
             'feature2_title': 'Passion Latine',
@@ -132,7 +132,7 @@ LANGUAGES = {
         },
         'musicians': {
             'title': 'Nos Artistes',
-            'subtitle': 'Rencontrez les musiciens talentueux qui donnent vie à LAtinouch',
+            'subtitle': 'Rencontrez les musiciens talentueux qui donnent vie à Latinouch',
             'marjorie': {
                 'name': 'Marjorie',
                 'instrument': 'Violoniste',
@@ -142,13 +142,13 @@ LANGUAGES = {
             'pierre': {
                 'name': 'Pierre',
                 'instrument': 'Guitare Rythmique',
-                'description': 'Le cœur rythmique de LAtinouch. Pierre maîtrise les accords qui soutiennent nos compositions, apportant groove et énergie. Son expérience dans différents genres latins lui permet de créer des textures uniques et enveloppantes.',
+                'description': 'Le cœur rythmique de Latinouch. Pierre maîtrise les accords qui soutiennent nos compositions, apportant groove et énergie. Son expérience dans différents genres latins lui permet de créer des textures uniques et enveloppantes.',
                 'skills': ['Bossa Nova', 'Cumbia', 'Reggaeton']
             },
             'romain': {
                 'name': 'Romain',
                 'instrument': 'Guitare Solo',
-                'description': 'Maître des solos et des mélodies principales. Romain fusionne les techniques de rock, jazz et musique traditionnelle latine pour créer des lignes mélodiques inoubliables qui définissent le son caractéristique de LAtinouch.',
+                'description': 'Maître des solos et des mélodies principales. Romain fusionne les techniques de rock, jazz et musique traditionnelle latine pour créer des lignes mélodiques inoubliables qui définissent le son caractéristique de Latinouch.',
                 'skills': ['Jazz Latino', 'Rock', 'Flamenco']
             },
             'neil': {
@@ -180,7 +180,7 @@ LANGUAGES = {
             'email': 'Email',
             'phone': 'Téléphone',
             'social': 'Réseaux Sociaux',
-            'footer': '© 2025 LAtinouch. Tous droits réservés.'
+            'footer': '© 2025 Latinouch. Tous droits réservés.'
         }
     },
     'en': {
@@ -192,14 +192,14 @@ LANGUAGES = {
             'contact': 'Contact'
         },
         'hero': {
-            'title': 'LAtinouch',
+            'title': 'Latinouch',
             'subtitle': 'Latin American Musical Fusion',
             'btn_musicians': 'Meet the Band',
             'btn_about': 'Our Story'
         },
         'about': {
             'title': 'Our Musical Passion',
-            'description': 'LAtinouch is born from the fusion of different Latin American cultures and sounds, creating a unique musical proposal that combines tradition and innovation.',
+            'description': 'Latinouch is born from the fusion of different Latin American cultures and sounds, creating a unique musical proposal that combines tradition and innovation.',
             'feature1_title': 'Authentic Sounds',
             'feature1_desc': 'Traditional instruments fused with modern elements',
             'feature2_title': 'Latin Passion',
@@ -209,7 +209,7 @@ LANGUAGES = {
         },
         'musicians': {
             'title': 'Our Artists',
-            'subtitle': 'Meet the talented musicians who bring LAtinouch to life',
+            'subtitle': 'Meet the talented musicians who bring Latinouch to life',
             'marjorie': {
                 'name': 'Marjorie',
                 'instrument': 'Violinist',
@@ -219,13 +219,13 @@ LANGUAGES = {
             'pierre': {
                 'name': 'Pierre',
                 'instrument': 'Rhythm Guitar',
-                'description': 'The rhythmic heart of LAtinouch. Pierre masters the chords that support our compositions, bringing groove and energy. His experience in different Latin genres allows him to create unique and enveloping textures.',
+                'description': 'The rhythmic heart of Latinouch. Pierre masters the chords that support our compositions, bringing groove and energy. His experience in different Latin genres allows him to create unique and enveloping textures.',
                 'skills': ['Bossa Nova', 'Cumbia', 'Reggaeton']
             },
             'romain': {
                 'name': 'Romain',
                 'instrument': 'Lead Guitar',
-                'description': 'Master of solos and main melodies. Romain fuses rock, jazz and traditional Latin music techniques to create unforgettable melodic lines that define LAtinouch\'s characteristic sound.',
+                'description': 'Master of solos and main melodies. Romain fuses rock, jazz and traditional Latin music techniques to create unforgettable melodic lines that define Latinouch\'s characteristic sound.',
                 'skills': ['Latin Jazz', 'Rock', 'Flamenco']
             },
             'neil': {
@@ -257,7 +257,7 @@ LANGUAGES = {
             'email': 'Email',
             'phone': 'Phone',
             'social': 'Social Media',
-            'footer': '© 2025 LAtinouch. All rights reserved.'
+            'footer': '© 2025 Latinouch. All rights reserved.'
         }
     }
 }

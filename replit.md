@@ -1,8 +1,8 @@
-# LAtinouch Musical Project
+# Latinouch Musical Project
 
 ## Overview
 
-LAtinouch is a multilingual musical project website built with Flask and PostgreSQL, featuring a modern and responsive design. The application serves as a landing page for a musical group, showcasing musicians and providing contact information. The site supports three languages (Spanish, French, English) with a vibrant orange and red color scheme, targeting international audiences.
+Latinouch is a multilingual musical project website built with Flask and PostgreSQL, featuring a modern and responsive design. The application serves as a landing page for a musical group, showcasing musicians and providing contact information. The site supports three languages (Spanish, French, English) with a vibrant orange and red color scheme, targeting international audiences.
 
 ## System Architecture
 
@@ -92,9 +92,12 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+- **June 28, 2025 - Brand Name Correction**: Corrected all references from "LAtinouch" to "Latinouch" throughout the entire application including templates, CSS comments, content dictionaries, and documentation files.
+- **June 28, 2025 - Language Selector Enhancement**: Fixed flag visibility in full-screen mode with improved contrast and positioning. Flags now display without text labels and are positioned left of the mobile menu button.
+- **June 28, 2025 - Mobile Menu Improvements**: Added auto-close functionality when clicking outside the menu or on navigation links. Reduced menu content size for better mobile experience.
 - **June 28, 2025 - Presentations Section**: Added new "Presentaciones/Concerts/Performances" section with 5 video presentation cards. Each card includes video placeholder, concert description, date, and location details. Implemented responsive design with hover animations and gradient backgrounds.
 - **June 28, 2025 - Navigation Transparency**: Modified navigation bar to be completely transparent, allowing background colors to show through. Updated language selector for better mobile responsiveness and compact flag-only display.
-- **June 28, 2025 - Logo Integration**: Added LAtinouch PNG logo to replace text branding in navigation header with hover effects and responsive sizing.
+- **June 28, 2025 - Logo Integration**: Added Latinouch PNG logo to replace text branding in navigation header with hover effects and responsive sizing.
 - **June 28, 2025 - Database Integration**: Added PostgreSQL database with comprehensive data models for musicians, contact messages, gallery, events, and site settings. Implemented multilingual content storage and dynamic content loading.
 - **June 28, 2025 - Multilingual Support**: Added language selector with Spanish, French, and English support, including flag-based navigation and URL routing (/es, /fr, /en).
 - **June 28, 2025 - Initial Setup**: Created responsive website with orange-red gradient design, interactive musician cards with 3D flip animations, and smooth scrolling navigation.

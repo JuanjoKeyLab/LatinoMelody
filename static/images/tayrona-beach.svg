@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <!-- Gradientes para el agua -->
+    <radialGradient id="waterGradient" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#4fc3f7;stop-opacity:0.8"/>
+      <stop offset="50%" style="stop-color:#29b6f6;stop-opacity:0.7"/>
+      <stop offset="100%" style="stop-color:#0288d1;stop-opacity:0.6"/>
+    </radialGradient>
+    
+    <!-- Gradiente para el cielo -->
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87ceeb;stop-opacity:0.3"/>
+      <stop offset="50%" style="stop-color:#b0e0e6;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#f0f8ff;stop-opacity:0.1"/>
+    </linearGradient>
+    
+    <!-- Gradiente para las montañas -->
+    <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2e7d32;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#1b5e20;stop-opacity:0.5"/>
+    </linearGradient>
+    
+    <!-- Gradiente para arena -->
+    <linearGradient id="sandGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff3c4;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#ffd54f;stop-opacity:0.5"/>
+    </linearGradient>
+    
+    <!-- Filtro para efectos suaves -->
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+    </filter>
+  </defs>
+  
+  <!-- Cielo de fondo -->
+  <rect width="1200" height="300" fill="url(#skyGradient)"/>
+  
+  <!-- Montañas del fondo -->
+  <path d="M0,200 Q200,120 400,150 T800,140 L1200,160 L1200,300 L0,300 Z" 
+        fill="url(#mountainGradient)" opacity="0.4"/>
+  
+  <!-- Montañas intermedias -->
+  <path d="M0,220 Q300,160 600,180 T1200,170 L1200,300 L0,300 Z" 
+        fill="url(#mountainGradient)" opacity="0.5"/>
+  
+  <!-- Selva tropical -->
+  <path d="M0,250 Q400,200 800,220 L1200,210 L1200,300 L0,300 Z" 
+        fill="#2e7d32" opacity="0.6"/>
+  
+  <!-- Arena de la playa -->
+  <ellipse cx="600" cy="450" rx="500" ry="80" fill="url(#sandGradient)"/>
+  
+  <!-- Agua del mar -->
+  <path d="M0,350 Q200,320 400,340 T800,330 Q1000,325 1200,340 L1200,600 L0,600 Z" 
+        fill="url(#waterGradient)"/>
+  
+  <!-- Olas suaves -->
+  <path d="M0,360 Q300,340 600,350 T1200,345" 
+        stroke="#ffffff" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M0,380 Q400,360 800,370 T1200,365" 
+        stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.3"/>
+  
+  <!-- Palmeras -->
+  <!-- Palmera 1 -->
+  <g transform="translate(150,280)">
+    <line x1="0" y1="0" x2="-10" y2="-120" stroke="#8d6e63" stroke-width="8"/>
+    <path d="M-10,-120 Q-40,-140 -60,-120 Q-50,-110 -30,-115 Q-20,-125 -10,-120" 
+          fill="#4caf50" opacity="0.7"/>
+    <path d="M-10,-120 Q20,-140 40,-120 Q30,-110 10,-115 Q0,-125 -10,-120" 
+          fill="#4caf50" opacity="0.7"/>
+    <path d="M-10,-120 Q-30,-160 -20,-180 Q-10,-170 -5,-155 Q-8,-135 -10,-120" 
+          fill="#4caf50" opacity="0.7"/>
+    <path d="M-10,-120 Q10,-160 0,-180 Q-10,-170 -15,-155 Q-12,-135 -10,-120" 
+          fill="#4caf50" opacity="0.7"/>
+  </g>
+  
+  <!-- Palmera 2 -->
+  <g transform="translate(950,300)">
+    <line x1="0" y1="0" x2="15" y2="-100" stroke="#8d6e63" stroke-width="6"/>
+    <path d="M15,-100 Q45,-120 65,-100 Q55,-90 35,-95 Q25,-105 15,-100" 
+          fill="#4caf50" opacity="0.6"/>
+    <path d="M15,-100 Q-15,-120 -35,-100 Q-25,-90 -5,-95 Q5,-105 15,-100" 
+          fill="#4caf50" opacity="0.6"/>
+    <path d="M15,-100 Q35,-140 25,-160 Q15,-150 10,-135 Q13,-115 15,-100" 
+          fill="#4caf50" opacity="0.6"/>
+  </g>
+  
+  <!-- Rocas características -->
+  <ellipse cx="200" cy="380" rx="30" ry="20" fill="#616161" opacity="0.5"/>
+  <ellipse cx="250" cy="375" rx="25" ry="18" fill="#757575" opacity="0.4"/>
+  <ellipse cx="800" cy="385" rx="35" ry="22" fill="#616161" opacity="0.5"/>
+  
+  <!-- Vegetación tropical adicional -->
+  <circle cx="100" cy="300" r="15" fill="#4caf50" opacity="0.5"/>
+  <circle cx="120" cy="295" r="12" fill="#66bb6a" opacity="0.4"/>
+  <circle cx="1050" cy="310" r="18" fill="#4caf50" opacity="0.5"/>
+  <circle cx="1080" cy="305" r="14" fill="#66bb6a" opacity="0.4"/>
+  
+  <!-- Efectos de luz solar -->
+  <circle cx="1000" cy="100" r="40" fill="#fff59d" opacity="0.3" filter="url(#blur)"/>
+  <circle cx="1000" cy="100" r="20" fill="#ffeb3b" opacity="0.4"/>
+  
+  <!-- Nubes suaves -->
+  <ellipse cx="300" cy="80" rx="60" ry="20" fill="#ffffff" opacity="0.2"/>
+  <ellipse cx="700" cy="60" rx="80" ry="25" fill="#ffffff" opacity="0.15"/>
+  <ellipse cx="1100" cy="90" rx="50" ry="18" fill="#ffffff" opacity="0.2"/>
+</svg>

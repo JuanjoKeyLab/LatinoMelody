@@ -22,24 +22,91 @@
             <a class="navbar-brand fw-bold" href="#home">
                 <i class="fas fa-music me-2"></i>LAtinouch
             </a>
+            
+            <!-- Language Selector -->
+            <div class="language-selector d-none d-md-flex me-3">
+                <a href="/es" class="lang-btn {% if current_lang == 'es' %}active{% endif %}" title="Español">
+                    <svg class="flag-icon" viewBox="0 0 512 512">
+                        <rect width="512" height="512" fill="#c60b1e"/>
+                        <rect width="512" height="341.3" fill="#ffc400"/>
+                    </svg>
+                    <span>ES</span>
+                </a>
+                <a href="/fr" class="lang-btn {% if current_lang == 'fr' %}active{% endif %}" title="Français">
+                    <svg class="flag-icon" viewBox="0 0 512 512">
+                        <rect width="170.7" height="512" fill="#002395"/>
+                        <rect x="170.7" width="170.7" height="512" fill="#ffffff"/>
+                        <rect x="341.3" width="170.7" height="512" fill="#ed2939"/>
+                    </svg>
+                    <span>FR</span>
+                </a>
+                <a href="/en" class="lang-btn {% if current_lang == 'en' %}active{% endif %}" title="English">
+                    <svg class="flag-icon" viewBox="0 0 512 512">
+                        <rect width="512" height="512" fill="#012169"/>
+                        <path d="M0 0l512 341.3v85.3L0 85.3z" fill="#ffffff"/>
+                        <path d="M512 0L0 341.3v85.3L512 85.3z" fill="#ffffff"/>
+                        <path d="M0 0l512 341.3v42.7L0 42.7z" fill="#c8102e"/>
+                        <path d="M512 0L0 341.3v42.7L512 42.7z" fill="#c8102e"/>
+                        <rect x="213.3" width="85.3" height="512" fill="#ffffff"/>
+                        <rect y="213.3" width="512" height="85.3" fill="#ffffff"/>
+                        <rect x="230.4" width="51.2" height="512" fill="#c8102e"/>
+                        <rect y="230.4" width="512" height="51.2" fill="#c8102e"/>
+                    </svg>
+                    <span>EN</span>
+                </a>
+            </div>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Inicio</a>
+                        <a class="nav-link" href="#home">{{ content.nav.home }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">Nosotros</a>
+                        <a class="nav-link" href="#about">{{ content.nav.about }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#musicians">Músicos</a>
+                        <a class="nav-link" href="#musicians">{{ content.nav.musicians }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contacto</a>
+                        <a class="nav-link" href="#contact">{{ content.nav.contact }}</a>
                     </li>
                 </ul>
+                
+                <!-- Mobile Language Selector -->
+                <div class="language-selector-mobile d-md-none mt-3">
+                    <a href="/es" class="lang-btn {% if current_lang == 'es' %}active{% endif %}" title="Español">
+                        <svg class="flag-icon" viewBox="0 0 512 512">
+                            <rect width="512" height="512" fill="#c60b1e"/>
+                            <rect width="512" height="341.3" fill="#ffc400"/>
+                        </svg>
+                        <span>Español</span>
+                    </a>
+                    <a href="/fr" class="lang-btn {% if current_lang == 'fr' %}active{% endif %}" title="Français">
+                        <svg class="flag-icon" viewBox="0 0 512 512">
+                            <rect width="170.7" height="512" fill="#002395"/>
+                            <rect x="170.7" width="170.7" height="512" fill="#ffffff"/>
+                            <rect x="341.3" width="170.7" height="512" fill="#ed2939"/>
+                        </svg>
+                        <span>Français</span>
+                    </a>
+                    <a href="/en" class="lang-btn {% if current_lang == 'en' %}active{% endif %}" title="English">
+                        <svg class="flag-icon" viewBox="0 0 512 512">
+                            <rect width="512" height="512" fill="#012169"/>
+                            <path d="M0 0l512 341.3v85.3L0 85.3z" fill="#ffffff"/>
+                            <path d="M512 0L0 341.3v85.3L512 85.3z" fill="#ffffff"/>
+                            <path d="M0 0l512 341.3v42.7L0 42.7z" fill="#c8102e"/>
+                            <path d="M512 0L0 341.3v42.7L512 42.7z" fill="#c8102e"/>
+                            <rect x="213.3" width="85.3" height="512" fill="#ffffff"/>
+                            <rect y="213.3" width="512" height="85.3" fill="#ffffff"/>
+                            <rect x="230.4" width="51.2" height="512" fill="#c8102e"/>
+                            <rect y="230.4" width="512" height="51.2" fill="#c8102e"/>
+                        </svg>
+                        <span>English</span>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -50,14 +117,14 @@
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-lg-8 mx-auto text-center">
-                    <h1 class="hero-title animate-fade-in">LAtinouch</h1>
-                    <p class="hero-subtitle animate-fade-in-delay">Fusión Musical Latinoamericana</p>
+                    <h1 class="hero-title animate-fade-in">{{ content.hero.title }}</h1>
+                    <p class="hero-subtitle animate-fade-in-delay">{{ content.hero.subtitle }}</p>
                     <div class="hero-buttons animate-fade-in-delay-2">
                         <a href="#musicians" class="btn btn-primary btn-lg me-3">
-                            <i class="fas fa-users me-2"></i>Conoce al Grupo
+                            <i class="fas fa-users me-2"></i>{{ content.hero.btn_musicians }}
                         </a>
                         <a href="#about" class="btn btn-outline-light btn-lg">
-                            <i class="fas fa-info-circle me-2"></i>Nuestra Historia
+                            <i class="fas fa-info-circle me-2"></i>{{ content.hero.btn_about }}
                         </a>
                     </div>
                 </div>
@@ -74,35 +141,34 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <div class="section-header text-center mb-5">
-                        <h2 class="section-title">Nuestra Pasión Musical</h2>
+                        <h2 class="section-title">{{ content.about.title }}</h2>
                         <div class="section-divider"></div>
                     </div>
                     <div class="about-content">
                         <p class="lead text-center mb-4">
-                            LAtinouch nace de la fusión de diferentes culturas y sonidos latinoamericanos, 
-                            creando una propuesta musical única que combina tradición e innovación.
+                            {{ content.about.description }}
                         </p>
                         <div class="row mt-5">
                             <div class="col-md-4 text-center mb-4">
                                 <div class="feature-icon">
                                     <i class="fas fa-guitar"></i>
                                 </div>
-                                <h5>Sonidos Auténticos</h5>
-                                <p>Instrumentos tradicionales fusionados con elementos modernos</p>
+                                <h5>{{ content.about.feature1_title }}</h5>
+                                <p>{{ content.about.feature1_desc }}</p>
                             </div>
                             <div class="col-md-4 text-center mb-4">
                                 <div class="feature-icon">
                                     <i class="fas fa-heart"></i>
                                 </div>
-                                <h5>Pasión Latina</h5>
-                                <p>Cada nota refleja la esencia y el alma de Latinoamérica</p>
+                                <h5>{{ content.about.feature2_title }}</h5>
+                                <p>{{ content.about.feature2_desc }}</p>
                             </div>
                             <div class="col-md-4 text-center mb-4">
                                 <div class="feature-icon">
                                     <i class="fas fa-globe-americas"></i>
                                 </div>
-                                <h5>Fusión Cultural</h5>
-                                <p>Uniendo fronteras a través de la música universal</p>
+                                <h5>{{ content.about.feature3_title }}</h5>
+                                <p>{{ content.about.feature3_desc }}</p>
                             </div>
                         </div>
                     </div>
@@ -115,9 +181,9 @@
     <section id="musicians" class="py-5 musicians-section">
         <div class="container">
             <div class="section-header text-center mb-5">
-                <h2 class="section-title">Nuestros Artistas</h2>
+                <h2 class="section-title">{{ content.musicians.title }}</h2>
                 <div class="section-divider"></div>
-                <p class="section-subtitle">Conoce a los talentosos músicos que dan vida a LAtinouch</p>
+                <p class="section-subtitle">{{ content.musicians.subtitle }}</p>
             </div>
             
             <div class="musicians-grid">
@@ -128,23 +194,21 @@
                             <div class="musician-image">
                                 <i class="fas fa-music"></i>
                             </div>
-                            <h4>Marjorie</h4>
-                            <p class="instrument">Violinista</p>
+                            <h4>{{ content.musicians.marjorie.name }}</h4>
+                            <p class="instrument">{{ content.musicians.marjorie.instrument }}</p>
                             <div class="card-icon">
                                 <i class="fas fa-violin"></i>
                             </div>
                         </div>
                         <div class="card-back">
-                            <h4>Marjorie</h4>
+                            <h4>{{ content.musicians.marjorie.name }}</h4>
                             <p class="mb-3">
-                                Virtuosa del violín con formación clásica y alma latina. Su técnica impecable 
-                                se combina con la pasión ardiente de los ritmos sudamericanos, creando 
-                                melodías que tocan el corazón y despiertan los sentidos.
+                                {{ content.musicians.marjorie.description }}
                             </p>
                             <div class="musician-skills">
-                                <span class="skill-tag">Clásico</span>
-                                <span class="skill-tag">Tango</span>
-                                <span class="skill-tag">Folk</span>
+                                {% for skill in content.musicians.marjorie.skills %}
+                                <span class="skill-tag">{{ skill }}</span>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
@@ -157,23 +221,21 @@
                             <div class="musician-image">
                                 <i class="fas fa-music"></i>
                             </div>
-                            <h4>Pierre</h4>
-                            <p class="instrument">Guitarra Rítmica</p>
+                            <h4>{{ content.musicians.pierre.name }}</h4>
+                            <p class="instrument">{{ content.musicians.pierre.instrument }}</p>
                             <div class="card-icon">
                                 <i class="fas fa-guitar"></i>
                             </div>
                         </div>
                         <div class="card-back">
-                            <h4>Pierre</h4>
+                            <h4>{{ content.musicians.pierre.name }}</h4>
                             <p class="mb-3">
-                                El corazón rítmico de LAtinouch. Pierre domina los acordes que sostienen 
-                                nuestras composiciones, aportando groove y energía. Su experiencia en 
-                                diferentes géneros latinos le permite crear texturas únicas y envolventes.
+                                {{ content.musicians.pierre.description }}
                             </p>
                             <div class="musician-skills">
-                                <span class="skill-tag">Bossa Nova</span>
-                                <span class="skill-tag">Cumbia</span>
-                                <span class="skill-tag">Reggaeton</span>
+                                {% for skill in content.musicians.pierre.skills %}
+                                <span class="skill-tag">{{ skill }}</span>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
@@ -186,23 +248,21 @@
                             <div class="musician-image">
                                 <i class="fas fa-music"></i>
                             </div>
-                            <h4>Romain</h4>
-                            <p class="instrument">Guitarra Líder</p>
+                            <h4>{{ content.musicians.romain.name }}</h4>
+                            <p class="instrument">{{ content.musicians.romain.instrument }}</p>
                             <div class="card-icon">
                                 <i class="fas fa-guitar"></i>
                             </div>
                         </div>
                         <div class="card-back">
-                            <h4>Romain</h4>
+                            <h4>{{ content.musicians.romain.name }}</h4>
                             <p class="mb-3">
-                                Maestro de los solos y las melodías principales. Romain fusiona técnicas 
-                                de rock, jazz y música tradicional latina para crear líneas melódicas 
-                                inolvidables que definen el sonido característico de LAtinouch.
+                                {{ content.musicians.romain.description }}
                             </p>
                             <div class="musician-skills">
-                                <span class="skill-tag">Jazz Latino</span>
-                                <span class="skill-tag">Rock</span>
-                                <span class="skill-tag">Flamenco</span>
+                                {% for skill in content.musicians.romain.skills %}
+                                <span class="skill-tag">{{ skill }}</span>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
@@ -215,23 +275,21 @@
                             <div class="musician-image">
                                 <i class="fas fa-music"></i>
                             </div>
-                            <h4>Neil</h4>
-                            <p class="instrument">Percusión</p>
+                            <h4>{{ content.musicians.neil.name }}</h4>
+                            <p class="instrument">{{ content.musicians.neil.instrument }}</p>
                             <div class="card-icon">
                                 <i class="fas fa-drum"></i>
                             </div>
                         </div>
                         <div class="card-back">
-                            <h4>Neil</h4>
+                            <h4>{{ content.musicians.neil.name }}</h4>
                             <p class="mb-3">
-                                El alma percusiva que da vida a nuestros ritmos. Neil domina tanto la 
-                                batería moderna como instrumentos tradicionales latinos, creando bases 
-                                rítmicas que invitan al movimiento y conectan con las raíces culturales.
+                                {{ content.musicians.neil.description }}
                             </p>
                             <div class="musician-skills">
-                                <span class="skill-tag">Salsa</span>
-                                <span class="skill-tag">Merengue</span>
-                                <span class="skill-tag">Samba</span>
+                                {% for skill in content.musicians.neil.skills %}
+                                <span class="skill-tag">{{ skill }}</span>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
@@ -244,23 +302,21 @@
                             <div class="musician-image">
                                 <i class="fas fa-music"></i>
                             </div>
-                            <h4>Juan José</h4>
-                            <p class="instrument">Teclado & Bajo Synth</p>
+                            <h4>{{ content.musicians.juanjose.name }}</h4>
+                            <p class="instrument">{{ content.musicians.juanjose.instrument }}</p>
                             <div class="card-icon">
                                 <i class="fas fa-keyboard"></i>
                             </div>
                         </div>
                         <div class="card-back">
-                            <h4>Juan José</h4>
+                            <h4>{{ content.musicians.juanjose.name }}</h4>
                             <p class="mb-3">
-                                Versátil multi-instrumentista que aporta las bases armónicas y melódicas. 
-                                Su dominio del teclado y sintetizadores crea atmósferas únicas, mientras 
-                                que sus líneas de bajo dan profundidad y groove a nuestras composiciones.
+                                {{ content.musicians.juanjose.description }}
                             </p>
                             <div class="musician-skills">
-                                <span class="skill-tag">Piano</span>
-                                <span class="skill-tag">Synthwave</span>
-                                <span class="skill-tag">Funk</span>
+                                {% for skill in content.musicians.juanjose.skills %}
+                                <span class="skill-tag">{{ skill }}</span>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
@@ -273,24 +329,21 @@
                             <div class="musician-image">
                                 <i class="fas fa-music"></i>
                             </div>
-                            <h4>Fay</h4>
-                            <p class="instrument">Voz Principal</p>
+                            <h4>{{ content.musicians.fay.name }}</h4>
+                            <p class="instrument">{{ content.musicians.fay.instrument }}</p>
                             <div class="card-icon">
                                 <i class="fas fa-microphone"></i>
                             </div>
                         </div>
                         <div class="card-back">
-                            <h4>Fay</h4>
+                            <h4>{{ content.musicians.fay.name }}</h4>
                             <p class="mb-3">
-                                La voz que emociona y cuenta historias. Fay posee un rango vocal 
-                                excepcional y la capacidad de transmitir emociones profundas. Su 
-                                interpretación auténtica da vida a las letras y conecta directamente 
-                                con el público.
+                                {{ content.musicians.fay.description }}
                             </p>
                             <div class="musician-skills">
-                                <span class="skill-tag">Balada</span>
-                                <span class="skill-tag">Pop Latino</span>
-                                <span class="skill-tag">R&B</span>
+                                {% for skill in content.musicians.fay.skills %}
+                                <span class="skill-tag">{{ skill }}</span>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
@@ -305,30 +358,35 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <div class="section-header text-center mb-5">
-                        <h2 class="section-title">Conecta con Nosotros</h2>
+                        <h2 class="section-title">{{ content.contact.title }}</h2>
                         <div class="section-divider"></div>
-                        <p class="section-subtitle">¿Interesado en colaborar o contratar nuestros servicios?</p>
+                        <p class="section-subtitle">{{ content.contact.subtitle }}</p>
                     </div>
                     <div class="row">
                         <div class="col-md-4 text-center mb-4">
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
-                                <h5>Email</h5>
+                                <h5>{{ content.contact.email }}</h5>
                                 <p>info@latinouch.com</p>
                             </div>
                         </div>
                         <div class="col-md-4 text-center mb-4">
                             <div class="contact-item">
                                 <i class="fas fa-phone"></i>
-                                <h5>Teléfono</h5>
+                                <h5>{{ content.contact.phone }}</h5>
                                 <p>+1 (555) 123-4567</p>
                             </div>
                         </div>
                         <div class="col-md-4 text-center mb-4">
                             <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <h5>Ubicación</h5>
-                                <p>América Latina</p>
+                                <i class="fas fa-share-alt"></i>
+                                <h5>{{ content.contact.social }}</h5>
+                                <div class="social-links mt-3">
+                                    <a href="#" class="social-link me-2"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="social-link me-2"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="social-link me-2"><i class="fab fa-youtube"></i></a>
+                                    <a href="#" class="social-link"><i class="fab fa-spotify"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -342,7 +400,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p class="mb-0">&copy; 2025 LAtinouch. Todos los derechos reservados.</p>
+                    <p class="mb-0">{{ content.contact.footer }}</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <div class="social-links">

@@ -453,7 +453,7 @@ section {
 /* Language Selector */
 .language-selector {
     display: flex;
-    gap: 0.3rem;
+    gap: 0.25rem;
     align-items: center;
     position: relative;
     z-index: 1000;
@@ -461,49 +461,71 @@ section {
 
 .language-selector-mobile {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 0.5rem;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: center;
 }
 
+/* Compact flag-only design */
 .lang-btn {
     display: flex;
     align-items: center;
-    gap: 0.3rem;
-    padding: 0.4rem 0.6rem;
+    justify-content: center;
+    padding: 0.3rem;
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
     color: var(--light-text);
     text-decoration: none;
     transition: all 0.3s ease;
-    font-size: 0.8rem;
-    font-weight: 500;
     backdrop-filter: blur(10px);
-    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
 }
 
 .lang-btn:hover {
     background: rgba(255, 255, 255, 0.2);
     color: var(--light-text);
-    transform: translateY(-1px);
-    box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
 }
 
 .lang-btn.active {
     background: var(--gradient-primary);
     border-color: var(--primary-orange);
-    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.4);
+    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.5);
+    transform: scale(1.1);
+}
+
+.lang-btn:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    z-index: 1001;
 }
 
 .flag-icon {
-    width: 18px;
-    height: 13px;
+    width: 20px;
+    height: 15px;
     border-radius: 2px;
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     flex-shrink: 0;
+}
+
+/* Hide text, show only flags in desktop */
+.language-selector .lang-btn span {
+    display: none;
 }
 
 /* Responsive adjustments */
@@ -513,13 +535,12 @@ section {
     }
     
     .lang-btn {
-        padding: 0.3rem 0.5rem;
-        font-size: 0.75rem;
+        padding: 0.25rem;
     }
     
     .flag-icon {
-        width: 16px;
-        height: 12px;
+        width: 18px;
+        height: 13px;
     }
 }
 
@@ -533,14 +554,19 @@ section {
     }
     
     .language-selector-mobile .lang-btn {
-        justify-content: center;
-        padding: 0.75rem 1rem;
-        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+        gap: 0.4rem;
+    }
+    
+    .language-selector-mobile .lang-btn span {
+        display: inline;
+        font-size: 0.8rem;
+        font-weight: 500;
     }
     
     .language-selector-mobile .flag-icon {
-        width: 24px;
-        height: 18px;
+        width: 20px;
+        height: 15px;
     }
 }
 

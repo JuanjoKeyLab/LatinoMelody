@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">
-                <img src="{{ url_for('static', filename='images/latinouch-logo.png') }}" alt="Latinouch" class="logo-img">
+                <img src="{{ url_for('static', filename='images/latinouch-logo2.png') }}" alt="Latinouch logo" class="logo-img">
             </a>
             
             <!-- Language Selector -->
@@ -196,7 +196,7 @@
                 <div class="musician-card" data-instrument="violin">
                     <div class="card-inner">
                         <div class="card-front">
-                            <div class="musician-image">
+                            <div class="static/images/">
                                 <i class="fas fa-music"></i>
                             </div>
                             <h4>{{ content.musicians.marjorie.name }}</h4>
@@ -224,7 +224,10 @@
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="musician-image">
-                                <i class="fas fa-music"></i>
+                                <div class="musician-image">
+    <img src="{{ url_for('static', filename='images/pierre.jpg') }}" alt="pierre">
+</div>
+
                             </div>
                             <h4>{{ content.musicians.pierre.name }}</h4>
                             <p class="instrument">{{ content.musicians.pierre.instrument }}</p>
@@ -251,7 +254,7 @@
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="musician-image">
-                                <i class="fas fa-music"></i>
+                               <img src="{{ url_for('static', filename='images/romain.jpg') }}" alt="romain">
                             </div>
                             <h4>{{ content.musicians.romain.name }}</h4>
                             <p class="instrument">{{ content.musicians.romain.instrument }}</p>
@@ -305,7 +308,7 @@
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="musician-image">
-                                <i class="fas fa-music"></i>
+                               <img src="{{ url_for('static', filename='images/juanito2.jpg') }}" alt="Juanito">
                             </div>
                             <h4>{{ content.musicians.juanjose.name }}</h4>
                             <p class="instrument">{{ content.musicians.juanjose.instrument }}</p>
@@ -332,7 +335,7 @@
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="musician-image">
-                                <i class="fas fa-music"></i>
+                                 <img src="{{ url_for('static', filename='images/fay.jpg') }}" alt="fay">
                             </div>
                             <h4>{{ content.musicians.fay.name }}</h4>
                             <p class="instrument">{{ content.musicians.fay.instrument }}</p>
@@ -369,19 +372,18 @@
                 <!-- Concert Card 1 -->
                 <div class="col-lg-6 col-xl-4">
                     <div class="presentation-card">
-                        <div class="video-container">
-                            <div class="video-placeholder">
-                                <i class="fas fa-play video-play-icon"></i>
-                                <div class="video-overlay">
-                                    <span class="video-duration">4:32</span>
-                                </div>
-                            </div>
-                        </div>
+                       <div class="video-container">
+                            <video controls width="100%" poster="{{ url_for('static', filename='images/video-thumbnail.jpg') }}">
+                                <source src="{{ url_for('static', filename='videos/latinouch_el-carretero_moliendo-cafe.mp4') }}" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                    </div>
+
                         <div class="presentation-content">
-                            <h4 class="presentation-title">Festival de Verano Madrid 2024</h4>
+                            <h4 class="presentation-title">Espacio Cultural Jean Penso Clapiers Avril 2025</h4>
                             <p class="presentation-description">
-                                Una noche mágica donde LAtinouch conquistó el escenario principal del Festival de Verano. 
-                                Con más de 5,000 personas vibrando al ritmo de nuestras fusiones latinas, este concierto 
+                                Una noche mágica donde Latinouch conquistó el escenario principal del concierto de primavera en el Espace Culturel Jean Penso a Clapiers cerca a Montpellier. 
+                                Con la participacion de algunas otros grupos musicales de diversos géneros, Latinouch logró, siendo la agrupación que cerró el evento, hacer que un público expectqnte y tranquilo vibrara al ritmo de nuestras fusiones latinas y se pararan de sus sillas a mover un poco sus cuerpos. este concierto 
                                 marcó un hito en nuestra carrera musical.
                             </p>
                             <div class="presentation-details">
@@ -530,7 +532,8 @@
                                 <h5>{{ content.contact.social }}</h5>
                                 <div class="social-links mt-3">
                                     <a href="#" class="social-link me-2"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#" class="social-link me-2"><i class="fab fa-instagram"></i></a>
+                                     <a href="https://www.instagram.com/latinouch.music/" class="social-link me-2" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-instagram"></i>
                                     <a href="#" class="social-link me-2"><i class="fab fa-youtube"></i></a>
                                     <a href="#" class="social-link"><i class="fab fa-spotify"></i></a>
                                 </div>
@@ -551,9 +554,10 @@
                 </div>
                 <div class="col-md-6 text-md-end">
                     <div class="social-links">
-                        <a href="#" class="social-link me-3">
-                            <i class="fab fa-instagram"></i>
-                        </a>
+                       <a href="https://www.instagram.com/latinouch.music/" class="social-link me-3" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-instagram"></i>
+</a>
+
                         <a href="#" class="social-link me-3">
                             <i class="fab fa-youtube"></i>
                         </a>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latinouch - Proyecto Musical</title>
+
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,14 +14,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">
-                <img src="{{ url_for('static', filename='images/latinouch-logo.png') }}" alt="Latinouch" class="logo-img">
+                <img src="{{ url_for('static', filename='images/latinouch-logo2.png') }}" alt="Latinouch logo" class="logo-img">
             </a>
             
             <!-- Language Selector -->
@@ -194,7 +195,7 @@
                 <div class="musician-card" data-instrument="violin">
                     <div class="card-inner">
                         <div class="card-front">
-                            <div class="musician-image">
+                            <div class="static/images/">
                                 <i class="fas fa-music"></i>
                             </div>
                             <h4>{{ content.musicians.marjorie.name }}</h4>
@@ -222,7 +223,10 @@
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="musician-image">
-                                <i class="fas fa-music"></i>
+                                <div class="musician-image">
+    <img src="{{ url_for('static', filename='images/pierre.jpg') }}" alt="pierre">
+</div>
+
                             </div>
                             <h4>{{ content.musicians.pierre.name }}</h4>
                             <p class="instrument">{{ content.musicians.pierre.instrument }}</p>
@@ -249,7 +253,7 @@
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="musician-image">
-                                <i class="fas fa-music"></i>
+                               <img src="{{ url_for('static', filename='images/romain.jpg') }}" alt="romain">
                             </div>
                             <h4>{{ content.musicians.romain.name }}</h4>
                             <p class="instrument">{{ content.musicians.romain.instrument }}</p>
@@ -303,7 +307,7 @@
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="musician-image">
-                                <i class="fas fa-music"></i>
+                               <img src="{{ url_for('static', filename='images/juanito2.jpg') }}" alt="Juanito">
                             </div>
                             <h4>{{ content.musicians.juanjose.name }}</h4>
                             <p class="instrument">{{ content.musicians.juanjose.instrument }}</p>
@@ -330,7 +334,7 @@
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="musician-image">
-                                <i class="fas fa-music"></i>
+                                 <img src="{{ url_for('static', filename='images/fay.jpg') }}" alt="fay">
                             </div>
                             <h4>{{ content.musicians.fay.name }}</h4>
                             <p class="instrument">{{ content.musicians.fay.instrument }}</p>
@@ -366,25 +370,30 @@
             <div class="row g-4">
                 <!-- Concert Card 1 -->
                 <div class="col-lg-6 col-xl-4">
-                    <div class="presentation-card">
+                     <div class="presentation-card">
                         <div class="video-container">
-                            <div class="video-placeholder">
-                                <i class="fas fa-play video-play-icon"></i>
-                                <div class="video-overlay">
-                                    <span class="video-duration">4:32</span>
-                                </div>
-                            </div>
+                            <iframe 
+                                class="video" 
+                                width="100%" 
+                                src="https://www.youtube.com/embed/pF89bsWBNks?si=GS9DTV_wpk8dx6fp" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen>
+                            </iframe>
                         </div>
-                        <div class="presentation-content">
-                            <h4 class="presentation-title">Festival de Verano Madrid 2024</h4>
+                    </div>
+
+
+                       <div class="presentation-content">
+                            <h4 class="presentation-title">{{ content.concerts[0].title }}</h4>
                             <p class="presentation-description">
-                                Una noche mágica donde LAtinouch conquistó el escenario principal del Festival de Verano. 
-                                Con más de 5,000 personas vibrando al ritmo de nuestras fusiones latinas, este concierto 
-                                marcó un hito en nuestra carrera musical.
+                                {{ content.concerts[0].description }}
                             </p>
                             <div class="presentation-details">
-                                <span class="detail-item"><i class="fas fa-calendar"></i> 15 Julio 2024</span>
-                                <span class="detail-item"><i class="fas fa-map-marker-alt"></i> Madrid, España</span>
+                                <span class="detail-item"><i class="fas fa-calendar"></i> {{ content.concerts[0].date }}</span>
+                                <span class="detail-item"><i class="fas fa-map-marker-alt"></i> {{ content.concerts[0].location }}</span>
                             </div>
                         </div>
                     </div>
@@ -528,7 +537,8 @@
                                 <h5>{{ content.contact.social }}</h5>
                                 <div class="social-links mt-3">
                                     <a href="#" class="social-link me-2"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#" class="social-link me-2"><i class="fab fa-instagram"></i></a>
+                                     <a href="https://www.instagram.com/latinouch.music/" class="social-link me-2" target="_blank" rel="noopener noreferrer">
+                                                 <i class="fab fa-instagram"></i>
                                     <a href="#" class="social-link me-2"><i class="fab fa-youtube"></i></a>
                                     <a href="#" class="social-link"><i class="fab fa-spotify"></i></a>
                                 </div>
@@ -549,9 +559,10 @@
                 </div>
                 <div class="col-md-6 text-md-end">
                     <div class="social-links">
-                        <a href="#" class="social-link me-3">
-                            <i class="fab fa-instagram"></i>
-                        </a>
+                       <a href="https://www.instagram.com/latinouch.music/" class="social-link me-3" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-instagram"></i>
+</a>
+
                         <a href="#" class="social-link me-3">
                             <i class="fab fa-youtube"></i>
                         </a>

@@ -8,11 +8,9 @@ class Base(DeclarativeBase):
 
 db = SQLAlchemy(model_class=Base)
 
-# create the app
 app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET", "dev-secret-key")
 
-# configure the database
 database_url = os.environ.get("DATABASE_URL")
 if database_url:
     app.config["SQLALCHEMY_DATABASE_URI"] = database_url
@@ -21,11 +19,17 @@ if database_url:
         "pool_pre_ping": True,
     }
 else:
-    # Fallback for development
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///latinouch.db"
 
-# initialize the app with the extension
 db.init_app(app)
+
+
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+
 
 # Language content
 LANGUAGES = {
@@ -380,17 +384,9 @@ def seed_data():
         db.session.rollback()
         return f"Error seeding database: {str(e)}"
 
+
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
-
-
-from flask import Flask, render_template
-
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return render_template('index.html')
-
-if __name__ == '__main__':
-    app.run(debug=True)
+   

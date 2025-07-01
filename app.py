@@ -372,22 +372,34 @@ def seed_data():
                 'position_order': 6
             }
         ]
+        
+        
+        for musician_data in musicians:
+            musician = models.Musician(**musician_data)
+            db.session.add(musician)
+        
+        db.session.commit()
+        return "Database seeded successfully!"
+        
+    except Exception as e:
+        db.session.rollback()
+        return f"Error seeding database: {str(e)}"
 
 
-        @app.route('/fr')
-def pagina_frances():
+@app.route('/es')
+def pagina_espanol():
     content = {
         'presentation': {
-            'title': 'Espace Culturel Jean Penso Clapiers Avril 2025',
+            'title': 'Espacio Cultural Jean Penso Clapiers Abril 2025',
             'description': (
-                "Une nuit magique où Latinouch a conquis la scène principale du concert de printemps à l’Espace Culturel Jean Penso, à Clapiers, près de Montpellier. "
-                "Avec la participation d'autres groupes musicaux de divers genres, Latinouch, en tant que groupe de clôture de l'événement, a réussi à faire vibrer un public calme et curieux au rythme de nos fusions latines, les incitant à se lever de leurs sièges pour bouger leurs corps. "
-                "Ce concert a marqué un tournant dans notre carrière musicale."
+                "Una noche mágica donde Latinouch conquistó el escenario principal del concierto de primavera en el Espace Culturel Jean Penso a Clapiers cerca a Montpellier. "
+                "Con la participación de otros grupos musicales de diversos géneros, Latinouch logró, siendo la agrupación que cerró el evento, hacer que un público expectante y tranquilo vibrara al ritmo de nuestras fusiones latinas y se pararan de sus sillas a mover un poco sus cuerpos. "
+                "Este concierto marcó un hito en nuestra carrera musical."
             ),
-            'date': '04 avril 2025',
-            'location': 'Clapiers, France'
+            'date': '04 abril 2025',
+            'location': 'Clapiers, Francia'
         },
-        'current_lang': 'fr'
+        'current_lang': 'es'
     }
     return render_template('index.html', content=content)
 
@@ -427,17 +439,6 @@ def page_francaise():
 
 
 
-        
-        for musician_data in musicians:
-            musician = models.Musician(**musician_data)
-            db.session.add(musician)
-        
-        db.session.commit()
-        return "Database seeded successfully!"
-        
-    except Exception as e:
-        db.session.rollback()
-        return f"Error seeding database: {str(e)}"
 
 
 

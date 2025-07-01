@@ -386,16 +386,14 @@
                     </div>
 
 
-                        <div class="presentation-content">
-                            <h4 class="presentation-title">Espacio Cultural Jean Penso Clapiers Avril 2025</h4>
+                       <div class="presentation-content">
+                            <h4 class="presentation-title">{{ content.concerts[0].title }}</h4>
                             <p class="presentation-description">
-                                Una noche mágica donde Latinouch conquistó el escenario principal del concierto de primavera en el Espace Culturel Jean Penso a Clapiers cerca a Montpellier. 
-                                Con la participacion de algunas otros grupos musicales de diversos géneros, Latinouch logró, siendo la agrupación que cerró el evento, hacer que un público expectqnte y tranquilo vibrara al ritmo de nuestras fusiones latinas y se pararan de sus sillas a mover un poco sus cuerpos. este concierto 
-                                marcó un hito en nuestra carrera musical.
+                                {{ content.concerts[0].description }}
                             </p>
                             <div class="presentation-details">
-                                <span class="detail-item"><i class="fas fa-calendar"></i> 04 avril 2025</span>
-                                <span class="detail-item"><i class="fas fa-map-marker-alt"></i> Clapiers, France</span>
+                                <span class="detail-item"><i class="fas fa-calendar"></i> {{ content.concerts[0].date }}</span>
+                                <span class="detail-item"><i class="fas fa-map-marker-alt"></i> {{ content.concerts[0].location }}</span>
                             </div>
                         </div>
                     </div>

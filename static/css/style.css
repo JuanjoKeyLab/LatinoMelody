@@ -1010,7 +1010,7 @@ section {
 
 .hero-section {
     position: relative;
-   background-image: url("images/latinouch-logo.png");
+   /* background-image: url("images/latinouch-logo.png"); */
 /* Ajusta la ruta si es necesario */
     background-size: cover;
     background-position: center;

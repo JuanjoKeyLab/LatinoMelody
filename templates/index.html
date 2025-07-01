@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <!-- Navigation -->
@@ -370,13 +370,21 @@
             <div class="row g-4">
                 <!-- Concert Card 1 -->
                 <div class="col-lg-6 col-xl-4">
-                    <div class="presentation-card">
-                       <div class="video-container">
-                            <video controls width="100%" poster="{{ url_for('static', filename='images/video-thumbnail.jpg') }}">
-                                <source src="{{ url_for('static', filename='videos/latinouch_el-carretero_moliendo-cafe.mp4') }}" type="video/mp4">
-                                Tu navegador no soporta el video.
-                            </video>
+                     <div class="presentation-card">
+                        <div class="video-container">
+                            <iframe 
+                                class="video" 
+                                width="100%" 
+                                src="https://www.youtube.com/embed/pF89bsWBNks?si=GS9DTV_wpk8dx6fp" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
                     </div>
+
 
                         <div class="presentation-content">
                             <h4 class="presentation-title">Espacio Cultural Jean Penso Clapiers Avril 2025</h4>
@@ -386,8 +394,8 @@
                                 marcó un hito en nuestra carrera musical.
                             </p>
                             <div class="presentation-details">
-                                <span class="detail-item"><i class="fas fa-calendar"></i> 15 Julio 2024</span>
-                                <span class="detail-item"><i class="fas fa-map-marker-alt"></i> Madrid, España</span>
+                                <span class="detail-item"><i class="fas fa-calendar"></i> 04 avril 2025</span>
+                                <span class="detail-item"><i class="fas fa-map-marker-alt"></i> Clapiers, France</span>
                             </div>
                         </div>
                     </div>
@@ -532,7 +540,7 @@
                                 <div class="social-links mt-3">
                                     <a href="#" class="social-link me-2"><i class="fab fa-facebook-f"></i></a>
                                      <a href="https://www.instagram.com/latinouch.music/" class="social-link me-2" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-instagram"></i>
+                                                 <i class="fab fa-instagram"></i>
                                     <a href="#" class="social-link me-2"><i class="fab fa-youtube"></i></a>
                                     <a href="#" class="social-link"><i class="fab fa-spotify"></i></a>
                                 </div>

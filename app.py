@@ -27,6 +27,11 @@ else:
 # initialize the app with the extension
 db.init_app(app)
 
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
 # Language content
 LANGUAGES = {
     'es': {

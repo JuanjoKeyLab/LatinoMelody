@@ -2,7 +2,8 @@
 __pycache__/
 *.py[cod]
 .env
-.venv/
+.venv/git rm --cached -r __pycache__/
+
 
 # Archivos multimedia grandes
 *.mp4
@@ -23,3 +24,7 @@ Thumbs.db
 # Archivos de compilación web (si usas herramientas como Webpack o Hugo)
 dist/
 build/
+
+# .mp4s 
+
+static/videos/*.MP4

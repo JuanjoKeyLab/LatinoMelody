@@ -8,11 +8,9 @@ class Base(DeclarativeBase):
 
 db = SQLAlchemy(model_class=Base)
 
-# create the app
 app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET", "dev-secret-key")
 
-# configure the database
 database_url = os.environ.get("DATABASE_URL")
 if database_url:
     app.config["SQLALCHEMY_DATABASE_URI"] = database_url
@@ -21,11 +19,17 @@ if database_url:
         "pool_pre_ping": True,
     }
 else:
-    # Fallback for development
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///latinouch.db"
 
-# initialize the app with the extension
 db.init_app(app)
+
+
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+
 
 # Language content
 LANGUAGES = {
@@ -369,6 +373,7 @@ def seed_data():
             }
         ]
         
+        
         for musician_data in musicians:
             musician = models.Musician(**musician_data)
             db.session.add(musician)
@@ -380,5 +385,64 @@ def seed_data():
         db.session.rollback()
         return f"Error seeding database: {str(e)}"
 
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+   
+   
+
+# @app.route('/es')
+# def pagina_espanol():
+#     content = {
+#         'presentation': {
+#             'title': 'Espacio Cultural Jean Penso Clapiers Abril 2025',
+#             'description': (
+#                 "Una noche mágica donde Latinouch conquistó el escenario principal del concierto de primavera en el Espace Culturel Jean Penso a Clapiers cerca a Montpellier. "
+#                 "Con la participación de otros grupos musicales de diversos géneros, Latinouch logró, siendo la agrupación que cerró el evento, hacer que un público expectante y tranquilo vibrara al ritmo de nuestras fusiones latinas y se pararan de sus sillas a mover un poco sus cuerpos. "
+#                 "Este concierto marcó un hito en nuestra carrera musical."
+#             ),
+#             'date': '04 abril 2025',
+#             'location': 'Clapiers, Francia'
+#         },
+#         'current_lang': 'es'
+#     }
+#     return render_template('index.html', content=content)
+
+# @app.route('/en')
+# def english_page():
+#     content = {
+#         'presentation': {
+#             'title': 'Jean Penso Cultural Space Clapiers April 2025',
+#             'description': (
+#                 "A magical night where Latinouch took over the main stage of the spring concert at the Espace Culturel Jean Penso in Clapiers, near Montpellier. "
+#                 "With the participation of other musical groups from various genres, Latinouch, as the closing act of the event, managed to make a calm and curious audience rise from their seats and move to the rhythm of our Latin fusions. "
+#                 "This concert marked a milestone in our musical journey."
+#             ),
+#             'date': '04 April 2025',
+#             'location': 'Clapiers, France'
+#         },
+#         'current_lang': 'en'
+#     }
+#     return render_template('index.html', content=content)
+
+# @app.route('/fr')
+# def page_francaise():
+#     content = {
+#         'presentation': {
+#             'title': 'Espace Culturel Jean Penso Clapiers Avril 2025',
+#             'description': (
+#                 "Une nuit magique où Latinouch a conquis la scène principale du concert de printemps à l’Espace Culturel Jean Penso, à Clapiers, près de Montpellier. "
+#                 "Avec la participation d'autres groupes musicaux de divers genres, Latinouch, en tant que groupe de clôture de l'événement, a réussi à faire vibrer un public calme et curieux au rythme de nos fusions latines, les incitant à se lever de leurs sièges pour bouger leurs corps. "
+#                 "Ce concert a marqué un tournant dans notre carrière musicale."
+#             ),
+#             'date': '04 avril 2025',
+#             'location': 'Clapiers, France'
+#         },
+#         'current_lang': 'fr'
+#     }
+#     return render_template('index.html', content=content)
+
+
+
+
+
